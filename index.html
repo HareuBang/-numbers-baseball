@@ -3,14 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>숫자 야구</title>
   <script defer src="./main.js"></script>
+  <style>
+    body{
+      background-color: #333;
+      color: #fff;
+    }
+    #container {
+      display: flex;
+      justify-content: center;
+    }
+    #result {
+      display: flex;
+      justify-content: center;
+    }
+    #result p {
+      text-align: center;
+    }
+    table, td, th {
+      width: 300px;
+      border : 1px solid #fff;
+      text-align: center;
+      border-collapse : collapse;
+    };
+  </style>
 </head>
 <body>
-  <form>
-    <input type="text"/>
-    <button>버튼</button>
-  </form>
-  <span></span>
+  <div id="container">
+    <div>
+      <h1>숫자 야구</h1>
+      <form>
+        <input type="text"/>
+        <button>버튼</button>
+      </form>
+    </div>
+  </div>
+  <div id="result">
+    <p></p>
+  </div>
 </body>
 </html>
