@@ -5,21 +5,6 @@ const $p = document.querySelector('p');
 let computer = generateRandomNumber();
 let count = 0;
 
-// 컴퓨터 숫자 4자리 설정
-function generateRandomNumber() {
-  let randomNumbers = [];
-
-  while(randomNumbers.length < 4){
-    let num = Math.floor(Math.random() * 10);
-
-    // 중복 숫자 판별
-    if(!randomNumbers.includes(num))
-      randomNumbers.push(num);
-  }
-
-  return randomNumbers;
-}
-
 // 버튼 클릭 시
 $button.addEventListener('click', () => {
   event.preventDefault();
@@ -41,6 +26,21 @@ $button.addEventListener('click', () => {
     $input.focus();
   }
 })
+
+// 컴퓨터 숫자 4자리 설정
+function generateRandomNumber() {
+  let randomNumbers = [];
+
+  while(randomNumbers.length < 4){
+    let num = Math.floor(Math.random() * 10);
+
+    // 중복 숫자 판별
+    if(!randomNumbers.includes(num))
+      randomNumbers.push(num);
+  }
+
+  return randomNumbers;
+}
 
 // 결과 출력
 function outputResult(player, [strike, ball, out]) {
